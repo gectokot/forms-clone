@@ -1,11 +1,13 @@
 import React from "react";
-import Form from "./components/Form";
+import List from "./List";
 import styled, { createGlobalStyle } from "styled-components";
 
-const Container = styled.div`
-  margin: 0 auto;
+const Wrapper = styled.div`
+  box-sizing: border-box;
+  margin: 0;
   padding: 0;
-  width: 500px;
+  padding-top: 25%;
+  width: 400px;
 `;
 
 const GlobalStyle = createGlobalStyle`
@@ -22,15 +24,17 @@ const GlobalStyle = createGlobalStyle`
     justify-content: center;
     height: 100vh;
     background: #F1F2B5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #135058, #F1F2B5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #135058, #F1F2B5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
 `;
 
 function App() {
   return (
-    <Container>
+    <Wrapper>
       <GlobalStyle />
-      <Form />
-    </Container>
+      <List />
+    </Wrapper>
   );
 }
 
